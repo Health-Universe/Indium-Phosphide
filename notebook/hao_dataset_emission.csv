@@ -1,8 +1,0 @@
-doi,in_source,in_amount_mmol,p_source,p_amount_mmol,first_sol,first_sol_amount_ml,TOP,TOP_amount_mmol,acid,acid_amount_mmol,amine,amine_amount_mmol,thiol,thiol_amount_mmol,zinc,zinc_amount_mmol,other,other_amount_mmol,total_volume_ml,temp_c,time_min,diameter_nm,abs_nm,emission_nm,date_input,user
-10.1002/jsid.308,indium acetate,1,tris(trimethylsilyl)phosphine,1,octadecene,1,None,0,None,0,None,0,dodecanethiol,0.5,zinc octanoate,2,None,0,1.12,180,60,None,None,500,7/25/2021,Hao
-10.1002/jsid.308,indium acetate,1,tris(trimethylsilyl)phosphine,1,octadecene,1,None,0,None,0,None,0,dodecanethiol,0.5,zinc octanoate,2,None,0,1.12,180,120,None,None,520,7/25/2021,Hao
-10.1002/jsid.308,indium acetate,1,tris(trimethylsilyl)phosphine,1,octadecene,1,None,0,None,0,None,0,dodecanethiol,0.5,zinc octanoate,2,None,0,1.12,180,240,None,None,538,7/25/2021,Hao
-10.1002/jsid.308,indium acetate,1,tris(trimethylsilyl)phosphine,1,octadecene,1,None,0,None,0,None,0,dodecanethiol,0.5,zinc octanoate,2,None,0,1.12,200,75,None,None,540,7/25/2021,Hao
-10.1002/jsid.308,indium acetate,1,tris(trimethylsilyl)phosphine,1,octadecene,1,None,0,None,0,None,0,dodecanethiol,0.5,zinc octanoate,2,None,0,1.12,230,30,None,None,560,7/27/2021,Hao
-10.1002/jsid.308,indium acetate,1,tris(trimethylsilyl)phosphine,1,octadecene,1,None,0,None,0,None,0,dodecanethiol,0.5,zinc octanoate,2,None,0,1.12,280,30,None,None,590,7/25/2021,Hao
-10.1002/jsid.308,indium acetate,1,tris(trimethylsilyl)phosphine,1,octadecene,1,None,0,None,0,None,0,dodecanethiol,0.5,zinc octanoate,2,None,0,1.12,280,120,None,None,600,7/25/2021,Hao
