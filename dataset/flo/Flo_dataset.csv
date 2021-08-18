@@ -2,23 +2,23 @@
 indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,None,0,None,0,None,0,zinc stearate,2,None,0,0.12,300,30,None,539,480
 chloroindium oxalate,1.05,tris(trimethylsilyl)phosphine,1.4,None,0,trioctylphosphine oxide,0.222222222,None,0,None,0,None,0,None,0,0.223,270,4320,2.61,610,None
 indium chloride,0.3,white phosphorus,0.45,None,0,oleylamine,0.264,None,0,None,0,zinc chloride,1.47,None,0,0.264,180,30,None,560,595
-indium chloride,0.3,white phosphorus,0.45,None,0,oleylamine,0.264,None,0,,0,zinc chloride,1.47,None,0,0.264,210,30,None,590,635
-indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,,0,zinc octanoate,2,None,0,1.12,180,60,None,None,500
-indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,,0,zinc octanoate,2,None,0,1.12,180,120,None,None,520
-indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,,0,zinc octanoate,2,None,0,1.12,180,240,None,None,538
-indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,,0,zinc octanoate,2,None,0,1.12,200,75,None,None,540
-indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,,0,zinc octanoate,2,None,0,1.12,280,30,None,None,590
-indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,,0,zinc octanoate,2,None,0,1.12,280,120,None,None,600
-indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,,0,zinc octanoate,2,None,0,1.12,230,30,None,None,560
-indium iodide,0.45,tris(dimethylamino)phosphine,1,None,0,oleylamine,1.218,None,0,,0,zinc chloride,1.1,None,0,1.218,180,3,1.7,480,None
-indium chloride,0.3,white phosphorus,0.45,None,0,oleylamine,1.336,None,0,,0,zinc chloride,1.47,None,0,1.336,150,30,None,492,529
-indium chloride,0.3,white phosphorus,0.45,None,0,oleylamine,1.336,None,0,,0,zinc chloride,1.47,None,0,1.336,180,30,None,522,555
-indium iodide,0.3,white phosphorus,0.299,None,0,oleylamine,1.336,None,0,,0,zinc iodide,1.47,None,0,1.336,180,30,None,430,482
-indium chloride,0.3,tris(dimethylamino)phosphine,1.2,None,0,trioctylamine,3.6,oleylamine,1.4,,0,zinc chloride,0.3,None,0,5,220,0.5,3.6,492,None
-indium chloride,0.3,tris(dimethylamino)phosphine,1.2,None,0,trioctylamine,3.6,oleylamine,1.4,,0,zinc chloride,0.3,None,0,5,220,30,4.6,611,None
-indium iodide,0.9,tris(dimethylamino)phosphine,1.3,None,0,oleylamine,1.975,None,0,,0,zinc chloride,2.2,None,0,1.975,180,2,None,485,None
-indium iodide,0.3,tris(dimethylamino)phosphine,0.66,None,0,oleylamine,1.975,None,0,,0,zinc chloride,0.73,None,0,1.975,180,2,None,505,530
-indium acetate,0.1,phosphine gas,3,myristic acid,0.3,octadecene,2,None,0,,0,None,0,None,0,2,200,15,2.5,601,None
+indium chloride,0.3,white phosphorus,0.45,None,0,oleylamine,0.264,None,0,None,0,zinc chloride,1.47,None,0,0.264,210,30,None,590,635
+indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,None,0,zinc octanoate,2,None,0,1.12,180,60,None,None,500
+indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,None,0,zinc octanoate,2,None,0,1.12,180,120,None,None,520
+indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,None,0,zinc octanoate,2,None,0,1.12,180,240,None,None,538
+indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,None,0,zinc octanoate,2,None,0,1.12,200,75,None,None,540
+indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,None,0,zinc octanoate,2,None,0,1.12,280,30,None,None,590
+indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,None,0,zinc octanoate,2,None,0,1.12,280,120,None,None,600
+indium acetate,1,tris(trimethylsilyl)phosphine,1,dodecanethiol,0.5,octadecene,1,None,0,None,0,zinc octanoate,2,None,0,1.12,230,30,None,None,560
+indium iodide,0.45,tris(dimethylamino)phosphine,1,None,0,oleylamine,1.218,None,0,None,0,zinc chloride,1.1,None,0,1.218,180,3,1.7,480,None
+indium chloride,0.3,white phosphorus,0.45,None,0,oleylamine,1.336,None,0,None,0,zinc chloride,1.47,None,0,1.336,150,30,None,492,529
+indium chloride,0.3,white phosphorus,0.45,None,0,oleylamine,1.336,None,0,None,0,zinc chloride,1.47,None,0,1.336,180,30,None,522,555
+indium iodide,0.3,white phosphorus,0.299,None,0,oleylamine,1.336,None,0,None,0,zinc iodide,1.47,None,0,1.336,180,30,None,430,482
+indium chloride,0.3,tris(dimethylamino)phosphine,1.2,None,0,trioctylamine,3.6,oleylamine,1.4,None,0,zinc chloride,0.3,None,0,5,220,0.5,3.6,492,None
+indium chloride,0.3,tris(dimethylamino)phosphine,1.2,None,0,trioctylamine,3.6,oleylamine,1.4,None,0,zinc chloride,0.3,None,0,5,220,30,4.6,611,None
+indium iodide,0.9,tris(dimethylamino)phosphine,1.3,None,0,oleylamine,1.975,None,0,None,0,zinc chloride,2.2,None,0,1.975,180,2,None,485,None
+indium iodide,0.3,tris(dimethylamino)phosphine,0.66,None,0,oleylamine,1.975,None,0,None,0,zinc chloride,0.73,None,0,1.975,180,2,None,505,530
+indium acetate,0.1,phosphine gas,3,myristic acid,0.3,octadecene,2,None,0,None,0,None,0,None,0,2,200,15,2.5,601,None
 indium acetate,0.1,phosphine gas,3,myristic acid,0.3,octadecene,2,None,0,None,0,None,0,None,0,2,260,15,4.3,620,None
 indium acetate,0.1,phosphine gas,3,myristic acid,0.3,octadecene,2,None,0,None,0,None,0,None,0,2,230,15,4.5,623,None
 indium acetate,0.1,phosphine gas,3,myristic acid,0.3,octadecene,2,None,0,None,0,None,0,None,0,2,260,15,4.5,660,None
