@@ -23,35 +23,12 @@ doi,in_source,in_amount_mmol,p_source,p_amount_mmol,first_sol,first_sol_amount_m
 10.1021/jp9704731,indium oxalate,2.33,tris(trimethylsilyl)phosphine,3,trioctylphosphine,10.95066185,trioctylphosphine oxide,1.011111111,None,0,None,0,None,0,None,0,11.962,300,4320,6,729,775,6/25/2021,Hao
 10.1557/jmr.2006.0068,indium trifluoroacetate,0.11,tris(trimethylsilyl)phosphine,0.1,octadecene,7,None,0,myristic acid,0.3,None,0,None,0,None,0,7,270,240,8.3,532,590,6/25/2021,Hao
 10.1016/S0167-577X(03)00371-9,indium chloride,10,sodium phosphide,11.3,dimethylformamide,90,None,0,None,0,None,0,None,0,None,0,90,160,120,None,465,550,6/25/2021,Hao
-10.1021/cm050110a,indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,245,5,None,499,552,6/25/2021,Hao
-10.1021/cm050110a,indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,245,10,None,519,562,6/25/2021,Hao
 10.1021/ja309863n,indium myristate,0.3,tris(trimethylsilyl)phosphine,0.15,octadecene,4,trioctylphosphine,1,None,0,None,0,None,0,None,0,5,210,10,None,511,572,6/25/2021,Hao
-10.1021/cm050110a,indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,245,15,None,530,575,6/25/2021,Hao
 10.1021/ja309863n,indium myristate,0.3,tris(trimethylsilyl)phosphine,0.15,octadecene,4,trioctylphosphine,1,None,0,None,0,None,0,None,0,5,210,14,None,532,581,6/25/2021,Hao
 10.1021/ja309863n,indium myristate,0.3,tris(trimethylgermyl)phosphine,0.15,octadecene,4,trioctylphosphine,1,None,0,None,0,None,0,None,0,5,210,10,None,529,582,6/25/2021,Hao
-10.1021/cm050110a,indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,245,180,None,549,592,6/25/2021,Hao
 10.1021/ja309863n,indium myristate,0.3,tris(trimethylgermyl)phosphine,0.15,octadecene,4,trioctylphosphine,1,None,0,None,0,None,0,None,0,5,210,14,None,552,601,6/25/2021,Hao
 10.1021/cm050110a,indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,260,1,None,456,607,6/25/2021,Hao
 10.1016/j.jcis.2010.06.037,chloroindium oxalate,4.2,tris(trimethylsilyl)phosphine,2.07,trioctylphosphine,6,trioctylphosphine oxide,11.11111111,None,0,None,0,None,0,None,0,17.112,280,4320,None,599,612,6/25/2021,Hao
-10.1021/cm050110a,indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,260,2.5,None,487,635,6/25/2021,Hao
-10.1021/cm050110a,indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,290,1,None,495,669,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,270,1,None,484,691,6/25/2021,Hao
-10.1021/cm050110a,indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,290,2.5,None,502,696,6/25/2021,Hao
-10.1021/cm050110a,indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,290,5,None,530,706,6/25/2021,Hao
-10.1021/cm050110a,indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,290,10,None,483,722,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,290,1,None,507,724,6/25/2021,Hao
-10.1021/cm050110a,indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,290,15,None,510,725,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,260,1,None,499,729,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,280,1,None,500,736,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,250,5,None,493,736,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,290,2.5,None,522,745,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,270,5,None,506,747,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,260,5,None,520,751,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,270,10,None,511,765,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,250,15,None,502,765,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,280,5,None,527,772,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,250,30,None,513,785,6/25/2021,Hao
-10.1021/cm050110a,indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,octadecene,44,None,0,None,0,None,0,None,0,None,0,44,260,15,None,529,788,6/25/2021,Hao
 10.1088/0957-4484/23/48/485609/meta,indium chloride,0.2,tris(trimethylsilyl)phosphine,0.2,octadecene,6.5,None,0,myristic acid,0.7,octylamine,1.2,acetic acid,0.6,None,0,6.699,130,30,None,408,None,6/25/2021,Hao
 10.1002/anie.200800281,indium acetate,0.5,phosphorus trichloride,0.5,octadecene,34,None,0,stearic acid,1.5,dioctyl ether,3,None,0,None,0,34.901,210,60,None,473,None,6/25/2021,Hao
 10.1002/anie.200800281,indium acetate,0.5,phosphorus trichloride,0.5,octadecene,34,None,0,stearic acid,1.5,dioctyl ether,3,None,0,None,0,34.901,230,60,None,524,None,6/25/2021,Hao

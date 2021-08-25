@@ -214,30 +214,6 @@ indium acetate,0.5,phosphorus trichloride,0.5,stearic acid,1.5,octadecene,31,dio
 indium acetate,0.5,phosphorus trichloride,0.5,stearic acid,1.5,octadecene,31,dioctyl ether,3,None,0,superhydride,3,None,0,34,270,60,None,576,None
 indium acetate,0.5,phosphorus trichloride,0.5,stearic acid,1.5,octadecene,31,dioctyl ether,3,None,0,superhydride,3,None,0,34,290,60,None,578,None
 indium acetate,0.7,tris(trimethylsilyl)phosphine,0.35,palmitic acid,2.1,octadecene,40,None,0,None,0,None,0,None,0,40,270,180,2.7,532,591
-indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,245,5,None,499,552
-indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,245,10,None,519,562
-indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,245,15,None,530,575
-indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,245,180,None,549,592
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,270,1,None,484,691
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,250,5,None,493,736
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,260,1,None,499,729
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,280,1,None,500,736
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,250,15,None,502,765
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,270,5,None,506,747
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,290,1,None,507,724
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,270,10,None,511,765
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,250,30,None,513,785
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,260,5,None,520,751
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,290,2.5,None,522,745
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,280,5,None,527,772
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,260,15,None,529,788
-indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,260,1,None,456,607
-indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,290,10,None,483,722
-indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,260,2.5,None,487,635
-indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,290,1,None,495,669
-indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,290,2.5,None,502,696
-indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,290,15,None,510,725
-indium stearate,0.25,tris(trimethylsilyl)phosphine,0.125,None,0,octadecene,44,None,0,None,0,None,0,None,0,44,290,5,None,530,706
 indium acetate,3,tris(trimethylsilyl)phosphine,1.5,oleic acid,9,octadecene,45,trioctylphosphine,3,None,0,None,0,None,0,48,260,60,2.4,None,None
 indium chloride,10,sodium phosphide,10,None,0,4-ethylpyridine,50,trioctylphosphine,20,None,0,None,0,None,0,70,130,2880,5,587,None
 indium acetate,1,tris(trimethylsilyl)phosphine,0.499,myristic acid,3,octadecene,75,None,0,None,0,None,0,None,0,75,270,180,4,585,630

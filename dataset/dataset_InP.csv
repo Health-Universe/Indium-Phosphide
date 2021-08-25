@@ -87,10 +87,6 @@ chloroindium oxalate,0.88,tris(trimethylsilyl)phosphine,1.4,,,None,0,trioctylpho
 indium chloride,2.26,tris(trimethylsilyl)phosphine,2,,,None,0,trioctylphosphine,8,trioctylphosphine oxide,0.83,None,0,None,0,8.83,270,1140,5,633,653
 indium chloride,10,sodium phosphide,10,,,None,0,4-ethylpyridine,50,trioctylphosphine,20,None,0,None,0,70,130,2880,5,587,None
 indium chloride,10,sodium phosphide,11.3,,,None,0,dimethylformamide,90,None,0,None,0,None,0,90,160,120,None,465,550
-indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,,,None,0,octadecene,44,None,0,None,0,None,0,44,245,5,None,499,552
-indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,,,None,0,octadecene,44,None,0,None,0,None,0,44,245,10,None,519,562
-indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,,,None,0,octadecene,44,None,0,None,0,None,0,44,245,15,None,530,575
-indium laurate,0.5,tris(trimethylsilyl)phosphine,0.25,,,None,0,octadecene,44,None,0,None,0,None,0,44,245,180,None,549,592
 indium myristate,0.3,tris(trimethylsilyl)phosphine,0.15,,,None,0,octadecene,4,trioctylphosphine,1,None,0,None,0,5,210,10,None,511,572
 indium myristate,0.3,tris(trimethylgermyl)phosphine,0.15,,,None,0,octadecene,4,trioctylphosphine,1,None,0,None,0,5,210,10,None,529,582
 indium myristate,0.3,tris(trimethylsilyl)phosphine,0.15,,,None,0,octadecene,4,trioctylphosphine,1,None,0,None,0,5,210,14,None,532,581
@@ -98,19 +94,6 @@ indium myristate,0.3,tris(trimethylsilyl)phosphine,0.15,,,None,0,octadecene,4,tr
 indium myristate,0.3,tris(trimethylgermyl)phosphine,0.15,,,None,0,octadecene,4,trioctylphosphine,1,None,0,None,0,5,210,14,None,552,601
 indium myristate,0.3,tris(trimethylgermyl)phosphine,0.15,,,None,0,octadecene,4,trioctylphosphine,1,None,0,None,0,5,210,20,3.6,578,641
 indium myristate,2,tris(trimethylsilyl)phosphine,0.15,,,None,0,octadecene,5,trioctylphosphine,1,None,0,None,0,6,300,30,3,547,590
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,270,1,None,484,691
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,250,5,None,493,736
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,260,1,None,499,729
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,280,1,None,500,736
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,250,15,None,502,765
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,270,5,None,506,747
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,290,1,None,507,724
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,270,10,None,511,765
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,250,30,None,513,785
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,260,5,None,520,751
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,290,2.5,None,522,745
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,280,5,None,527,772
-indium myristate,0.25,tris(trimethylsilyl)phosphine,0.125,,,None,0,octadecene,44,None,0,None,0,None,0,44,260,15,None,529,788
 indium oxalate,2.33,tris(trimethylsilyl)phosphine,3,,,None,0,trioctylphosphine,10.95066185,trioctylphosphine oxide,1.011111111,None,0,None,0,11.962,250,4320,2.6,517,600
 indium oxalate,2.33,tris(trimethylsilyl)phosphine,3,,,None,0,trioctylphosphine,10.95066185,trioctylphosphine oxide,1.011111111,None,0,None,0,11.962,260,4320,3,577,646
 indium oxalate,2.33,tris(trimethylsilyl)phosphine,3,,,None,0,trioctylphosphine,10.95066185,trioctylphosphine oxide,1.011111111,None,0,None,0,11.962,270,4320,3.5,590,677
