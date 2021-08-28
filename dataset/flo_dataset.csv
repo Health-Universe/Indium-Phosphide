@@ -26,7 +26,7 @@ indium chloride,0.45,tris(dimethylamino)phosphine,2.48,None,0,oleylamine,2.024,N
 indium chloride,0.45,tris(dimethylamino)phosphine,1.6,None,0,oleylamine,2.024,None,0,None,0,zinc chloride,2.2,None,0,2.024,180,30,2.48,None,None
 indium chloride,0.5,tris(dimethylamino)phosphine,2.75,None,0,oleylamine,2.024,None,0,None,0,zinc chloride,1.5,zinc iodide,0.5,2.024,180,30,3,490,560
 chloroindium oxalate,1.76,tris(trimethylsilyl)phosphine,1.04,None,0,trioctylphosphine,2.4,trioctylphosphine oxide,0.222222222,None,0,None,0,None,0,2.629,270,4320,3.5,595,None
-chloroindium oxalate,1.76,tris(trimethylsilyl)phosphine,1.04,None,0,trioctylphosphine,2.4,trioctylphosphine oxide,0.222222222,None,0,None,0,None,0,2.629,300,4320,4.6,685,None
+chloroindium oxalate,1.76,tris(trimethylsilyl)phosphine,1.04,None,0,trioctylphosphine,2.4,trioctylphosphine oxide,0.222222222,None,0,None,0,None,0,2.629,300,4320,4.6,650,None
 indium chloride,0.45,tris(dimethylamino)phosphine,1.926,None,0,oleylamine,2.435,None,0,None,0,zinc chloride,2.2,None,0,2.435,170,10,None,576,628
 indium chloride,0.45,tris(dimethylamino)phosphine,1.926,None,0,oleylamine,2.435,None,0,None,0,zinc iodide,2.2,None,0,2.435,170,10,7,478,518
 indium chloride,0.225,tris(diethylamino)phosphine,0.8,None,0,oleylamine,2.468,None,0,None,0,zinc chloride,1.1,None,0,2.468,180,30,3.2,560,None
@@ -117,7 +117,6 @@ indium acetate,2,tris(trimethylsilyl)phosphine,0.3,myristic acid,7.25,octadecene
 indium acetate,2,tris(trimethylsilyl)phosphine,0.3,myristic acid,7.25,octadecene,6.5,octylamine,0.595,None,0,None,0,None,0,7.095,178,60,None,520,None
 indium acetate,2,tris(trimethylsilyl)phosphine,0.3,myristic acid,7.7,octadecene,6.5,octylamine,0.595,None,0,None,0,None,0,7.095,178,1,None,530,None
 indium acetate,2,tris(trimethylsilyl)phosphine,0.3,myristic acid,7.7,octadecene,6.5,octylamine,0.595,None,0,None,0,None,0,7.095,178,20,None,590,None
-indium acetate,2,tris(trimethylsilyl)phosphine,0.3,myristic acid,7.7,octadecene,6.5,octylamine,0.595,None,0,None,0,None,0,7.095,178,30,None,605,None
 indium acetate,2,tris(trimethylsilyl)phosphine,0.3,myristic acid,7.7,octadecene,6.5,octylamine,0.595,None,0,None,0,None,0,7.095,178,60,None,625,None
 indium acetate,2,tris(trimethylsilyl)phosphine,0.3,myristic acid,8.2,octadecene,6.5,octylamine,0.597,None,0,None,0,None,0,7.097,178,0.2,None,491,None
 indium acetate,2,tris(trimethylsilyl)phosphine,0.3,myristic acid,8.2,octadecene,6.5,octylamine,0.597,None,0,None,0,None,0,7.097,178,1,None,522,None
