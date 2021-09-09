@@ -124,10 +124,9 @@ with row2_4:
                     "Do you add any amine?",
                     ('None',
                     'octylamine',
-                    'oleylamine',
                     'hexadecylamine',
                     'dioctylamine'))
-    st.markdown('#####')
+    st.markdown('#')
 
 
     amine_amount = st.number_input(label='How much amine is used in mmol? (mmol)', value=0.00)
@@ -248,10 +247,7 @@ st.write(user_df)
 df = pd.read_csv('hao_dataset.csv')
 #Separate out initial DataFrame into the input features and output features
 df_input = df.drop(columns =['diameter_nm', 'abs_nm', 'emission_nm','doi','user','date_input'], inplace = False, axis = 1)
-df_output_d = df['diameter_nm']
-df_output_a = df['emission_nm']
-df_output_e = df['abs_nm']
-
+df_output = df[['diameter_nm', 'abs_nm', 'emission_nm']]
 
 df_input['temp_c'] = df_input['temp_c'].astype(float)
 input_num_cols = [col for col in df_input.columns if df[col].dtypes !='O']
@@ -268,14 +264,9 @@ ct.fit_transform(df_input)
 #Use same column transformer on user input
 X = ct.transform(user_df)
 
-diameter_model = joblib.load('model_InP_SO_diameter_DecisionTree.joblib')
-abs_model = joblib.load('model_InP_SO_abs_DecisionTree.joblib')
-emission_model = joblib.load('model_InP_SO_emission_ExtraTrees.joblib')
 
-diameter_predicted = diameter_model.predict(X)
-abs_predicted = abs_model.predict(X)
-emission_predicted = emission_model.predict(X)
-
+load_Extra_Trees = joblib.load('model_InP_MO_ExtraTrees.joblib')
+predicted = load_Extra_Trees.predict(X)
 st.markdown('****')
 
 col1, col2, col3, col4, col5 = st.beta_columns([1,1,1,1,1])
@@ -286,9 +277,9 @@ with col3:
 c1, c2, c3 =  st.beta_columns([1,1,1])
 if predict:
     with c2:
-        st.write('Predicted diameter is', round(diameter_predicted[0], 3))
-        st.write('Predicted absorbance max is', round(abs_predicted[0], 3))
-        st.write('Predicted emission is', round(emission_predicted[0], 3))
+        st.write('Predicted diameter is', round(predicted[0, 0], 3))
+        st.write('Predicted absorbance max is', round(predicted[0, 1], 3))
+        st.write('Predicted emission is', round(predicted[0, 2], 3))
 
 
 st.subheader('Updated 09/06/2021')

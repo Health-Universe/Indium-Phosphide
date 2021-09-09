@@ -268,9 +268,9 @@ ct.fit_transform(df_input)
 #Use same column transformer on user input
 X = ct.transform(user_df)
 
-diameter_model = joblib.load('model_SO_diameter_DecisionTree.joblib')
-abs_model = joblib.load('model_SO_abs_DecisionTree.joblib')
-emission_model = joblib.load('model_SO_emission_ExtraTrees.joblib')
+diameter_model = joblib.load('model_InP_SO_diameter_DecisionTree.joblib')
+abs_model = joblib.load('model_InP_SO_abs_DecisionTree.joblib')
+emission_model = joblib.load('model_InP_SO_emission_ExtraTrees.joblib')
 
 diameter_predicted = diameter_model.predict(X)
 abs_predicted = abs_model.predict(X)
