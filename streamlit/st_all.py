@@ -13,7 +13,12 @@ st.set_page_config(layout="wide")
 
 st.markdown("<h1 style='text-align: center; color: indigo;'>Machine Learning for Quantum Dots Synthesis  - Cossairt Laboratory</h1>", unsafe_allow_html=True)
 
-row0_1, row0_2, row0_3, row0_4, row0_5 = st.beta_columns(5)
+if "InP_QD" not in st.session_state:
+    st.session_state.InP_QD = False
+if "CdSe_QD" not in st.session_state:
+    st.session_state.CdSe_QD = False
+
+row0_1, row0_2, row0_3, row0_4, row0_5 = st.columns(5)
 with row0_2:
     st.write("Choose a quantum dot:")
 with row0_3:
@@ -21,14 +26,17 @@ with row0_3:
 with row0_4:
     inp = st.button('Indium Phosphide')
 
-if inp:
+if inp or st.session_state.InP_QD:
+    st.session_state.InP_QD = True
+    st.session_state.CdSe_QD = False
+
     st.header('Predicting Properties of InP Quantum Dots')
 
     st.markdown('****')
     st.write('Answer the questions below about your InP quandum dots synthesis and we will predict the diameter, absorbance max, and emission wavelength of your dots.')
     st.markdown('****')
 
-    row1_1, row1_2 = st.beta_columns(2)
+    row1_1, row1_2 = st.columns(2)
 
     with row1_1:
         st.subheader("Indium precursor")
@@ -64,7 +72,7 @@ if inp:
 
 
 
-    row1a_1, row1a_2 = st.beta_columns(2)
+    row1a_1, row1a_2 = st.columns(2)
 
     with row1a_1:
         In_amount = st.number_input(label='How much In source is used in mmol? (mmol)', value=0.00)
@@ -80,7 +88,7 @@ if inp:
 
 
     st.subheader("Solvents and ligands")
-    row2_1, row2_2, row2_3, row2_4, row2_5 = st.beta_columns(5)
+    row2_1, row2_2, row2_3, row2_4, row2_5 = st.columns(5)
 
 
     with row2_1:
@@ -138,7 +146,7 @@ if inp:
                         'dodecanethiol'))
 
 
-    row2a_1, row2a_2, row2a_3, row2a_4, row2a_5 = st.beta_columns(5)
+    row2a_1, row2a_2, row2a_3, row2a_4, row2a_5 = st.columns(5)
 
     with row2a_1:
 
@@ -184,7 +192,7 @@ if inp:
 
 
     st.subheader("Additives")
-    row3_1, row3_2 = st.beta_columns(2)
+    row3_1, row3_2 = st.columns(2)
     with row3_1:
         # Creating zinc question
         zinc = st.radio(
@@ -211,7 +219,7 @@ if inp:
 
 
 
-    row3a_1, row3a_2 = st.beta_columns(2)
+    row3a_1, row3a_2 = st.columns(2)
     with row3a_1:
 
         zinc_amount = st.number_input(label='How much zinc is used? (mmol)', value=0.00)
@@ -231,7 +239,7 @@ if inp:
 
 
     st.subheader("Reaction Conditions")
-    row4_1, row4_2, row4_3 = st.beta_columns(3)
+    row4_1, row4_2, row4_3 = st.columns(3)
 
     with row4_1:
         # Reaction volume
@@ -317,12 +325,10 @@ if inp:
 
     st.markdown('****')
 
-    col1, col2, col3, col4, col5 = st.beta_columns([1,1,1,1,1])
+    col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
     with col3:
         predict = st.button('PREDICT')
-
-
-    c1, c2, c3 =  st.beta_columns([1,1,1])
+    c1, c2, c3 =  st.columns([1,1,1])
     if predict:
         with c2:
             st.write('Predicted diameter is', round(diameter_predicted[0], 3))
@@ -334,7 +340,10 @@ if inp:
 
 
 
-if cdse:
+if cdse or st.session_state.CdSe_QD:
+    st.session_state.CdSe_QD = True
+    st.session_state.InP_QD = False
+
     st.header('Predicting Properties of CdSe Quantum Dots')
 
     st.markdown('****')
@@ -342,7 +351,7 @@ if cdse:
     st.markdown('****')
 
 
-    row4_1, row4_2, row4_3, row4_4 = st.beta_columns(4)
+    row4_1, row4_2, row4_3, row4_4 = st.columns(4)
     with row4_1:
         Cd = st.radio('1. What is your cadmium source?', 
                     ['cadmium stearate', 
@@ -383,7 +392,7 @@ if cdse:
                      'trioctylphosphine', 
                      'triphenylphosphine'])
 
-    row4a_1, row4a_2, row4a_3, row4a_4 = st.beta_columns(4)
+    row4a_1, row4a_2, row4a_3, row4a_4 = st.columns(4)
     with row4a_1:
         Cd_amount = st.number_input(label='How much Cd source in mmol? (mmol)', value=0.00)
     with row4a_2:
@@ -406,7 +415,7 @@ if cdse:
     st.subheader("Solvents: ")
 
 
-    row5_1, row5_2 = st.beta_columns(2)
+    row5_1, row5_2 = st.columns(2)
     with row5_1:
         sol1 = st.radio('6. What is your first solvent?',
                         ['None', 
@@ -422,7 +431,7 @@ if cdse:
     
 
 
-    row5a_1, row5a_2 = st.beta_columns(2)
+    row5a_1, row5a_2 = st.columns(2)
     with row5a_1:
         sol1_amount = st.number_input(label='How much first solvent in g? (g)', value=0.00)
         if sol1 == 'None':
@@ -437,7 +446,7 @@ if cdse:
 
 
     st.subheader("Reaction Conditions: ")
-    row6_1, row6_2 = st.beta_columns(2)
+    row6_1, row6_2 = st.columns(2)
     with row6_1:
         # Reaction temperature
         Temp = st.number_input(label='8. What is the nucleation temperature? (C)', value=0.0)
