@@ -458,11 +458,21 @@ if cdse or st.session_state.CdSe_QD:
     
 
     #Rearange users' choice into a list to input to the ML model
-    user_input = [slider_answers[7], radio_answers[0], slider_answers[0], slider_answers[1],
-                radio_answers[1], slider_answers[2], radio_answers[2], slider_answers[3],
-                radio_answers[3], slider_answers[4], radio_answers[4], slider_answers[5],
-                radio_answers[5], slider_answers[6], slider_answers[8]
-                ]
+    user_input = [Temp, 
+                  Cd, 
+                  Cd_amount,
+                  Se_amount,
+                  Acid,
+                  Acid_amount,
+                  Amine,
+                  Amine_amount,
+                  Ph,
+                  Ph_amount,
+                  sol1,
+                  sol1_amount,
+                  sol2,
+                  sol2_amount,
+                  Time]
 
     #Naming each choice in the user input
     user_df = pd.DataFrame(np.array(user_input).reshape(1, -1), columns=['Growth Temp (Celsius)',
