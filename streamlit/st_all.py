@@ -567,7 +567,7 @@ if st.session_state.current != None:
         c1, c2, c3 =  st.columns([1,1,1])
         if predict:
             with c2:
-                st.write('Predicted diameter is', round(diameter_CdSe_predicted[0], 3))
+                st.subheader('Predicted diameter is', round(diameter_CdSe_predicted[0], 3))
                 st.write('Predicted absorbance max is', round(abs_CdSe_predicted[0], 3))
                 st.write('Predicted emission is', round(emission_CdSe_predicted[0], 3))
     
