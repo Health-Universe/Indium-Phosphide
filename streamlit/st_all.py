@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 st.set_page_config(layout="wide")
 
-st.markdown("<h1 style='text-align: center; color: MediumAquaMarine;'>Machine Learning for Quantum Dots Synthesis</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: MediumAquaMarine;'>Machine Learning for Syntheses of Quantum Dots</h1>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: indigo; font-size:22px;'>Cossairt Laboratory - University of Washington</h1>", unsafe_allow_html=True)
 st.markdown('***')
 
