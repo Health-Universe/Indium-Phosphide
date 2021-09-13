@@ -223,7 +223,8 @@ if st.session_state.current != None:
                             'zinc acetate',
                             'zinc octanoate',
                             'zinc oleate',
-                            'zinc stearate'))
+                            'zinc stearate',
+                            'zinc undecylenate'))
 
 
         with row3_2:
