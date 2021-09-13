@@ -310,7 +310,7 @@ if st.session_state.current != None:
         st.write(user_df_InP)
 
         #Scaling and encoding user input using the raw dataset
-        df_InP = pd.read_csv('../dataset/hao_dataset.csv')
+        df_InP = pd.read_csv('dataset/hao_dataset.csv')
         #Separate out initial DataFrame into the input features and output features
         df_input_InP = df_InP.drop(columns =['diameter_nm', 'abs_nm', 'emission_nm','doi','user','date_input'], inplace = False, axis = 1)
         df_output_d_InP = df_InP['diameter_nm']
@@ -333,9 +333,9 @@ if st.session_state.current != None:
         #Use same column transformer on user input
         X_InP = ct_InP.transform(user_df_InP)
 
-        diameter_model = joblib.load('../notebook/hao/model_SO_diameter_DecisionTree.joblib')
-        abs_model = joblib.load('../notebook/hao/model_SO_abs_DecisionTree.joblib')
-        emission_model = joblib.load('../notebook/hao/model_SO_emission_ExtraTrees.joblib')
+        diameter_model = joblib.load('model_SO_diameter_DecisionTree.joblib')
+        abs_model = joblib.load('model_SO_abs_DecisionTree.joblib')
+        emission_model = joblib.load('model_SO_emission_ExtraTrees.joblib')
 
         diameter_In_predicted = diameter_model.predict(X_InP)
         abs_In_predicted = abs_model.predict(X_InP)
@@ -511,7 +511,7 @@ if st.session_state.current != None:
         st.write(user_df_CdSe)
 
         #Scaling and encoding user input using the raw dataset
-        df_CdSe = pd.read_csv('../CdSe/dataset_CdSe_raw.csv')
+        df_CdSe = pd.read_csv('dataset_CdSe_raw.csv')
 
         #Separate out initial DataFrame into the input features and output features
         df_input_CdSe = df_CdSe.drop(columns =['Injection Temp (Celsius)', 'Metal_amount (g)',
@@ -543,9 +543,9 @@ if st.session_state.current != None:
         X_CdSe = ct_CdSe.transform(user_df_CdSe)
 
 
-        diameter_CdSe_model = joblib.load('../CdSe/model_CdSe_SO_diameter_ExtraTrees.joblib')
-        abs_CdSe_model = joblib.load('../CdSe/model_CdSe_SO_abs_DecisionTree.joblib')
-        emission_CdSe_model = joblib.load('../CdSe/model_CdSe_SO_emission_DecisionTree.joblib')
+        diameter_CdSe_model = joblib.load('model_CdSe_SO_diameter_ExtraTrees.joblib')
+        abs_CdSe_model = joblib.load('model_CdSe_SO_abs_DecisionTree.joblib')
+        emission_CdSe_model = joblib.load('model_CdSe_SO_emission_DecisionTree.joblib')
 
         diameter_CdSe_predicted = diameter_CdSe_model.predict(X_CdSe)
         abs_CdSe_predicted = abs_CdSe_model.predict(X_CdSe)
