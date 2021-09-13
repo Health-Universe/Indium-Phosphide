@@ -312,7 +312,9 @@ if st.session_state.current != None:
 
         #Scaling and encoding user input using the raw dataset
         # df_InP = pd.read_csv('hao_dataset.csv')
-        df_InP = Path(__file__).parents[0] / 'hao_dataset.csv'
+        df_InP_1 = Path(__file__).parents[0] / 'hao_dataset.csv'
+        df_InP = pd.read_csv(df_InP_1)
+
         #Separate out initial DataFrame into the input features and output features
         df_input_InP = df_InP.drop(columns =['diameter_nm', 'abs_nm', 'emission_nm','doi','user','date_input'], inplace = False, axis = 1)
         df_output_d_InP = df_InP['diameter_nm']
@@ -515,7 +517,8 @@ if st.session_state.current != None:
         #Scaling and encoding user input using the raw dataset
         # df_CdSe = pd.read_csv('dataset_CdSe_raw.csv')
 
-        df_CdSe = Path(__file__).parents[0] / 'dataset_CdSe_raw.csv'
+        df_CdSe_1 = Path(__file__).parents[0] / 'dataset_CdSe_raw.csv'
+        df_CdSe = pd.read_csv(df_CdSe_1)
 
         #Separate out initial DataFrame into the input features and output features
         df_input_CdSe = df_CdSe.drop(columns =['Injection Temp (Celsius)', 'Metal_amount (g)',
