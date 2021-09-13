@@ -337,9 +337,10 @@ if st.session_state.current != None:
         #Use same column transformer on user input
         X_InP = ct_InP.transform(user_df_InP)
 
-        diameter_model = joblib.load('model_SO_diameter_DecisionTree.joblib')
-        abs_model = joblib.load('model_SO_abs_DecisionTree.joblib')
-        emission_model = joblib.load('model_SO_emission_ExtraTrees.joblib')
+
+        diameter_model = joblib.load(Path(__file__).parents[0] / 'model_SO_diameter_DecisionTree.joblib')
+        abs_model = joblib.load(Path(__file__).parents[0] / 'model_SO_abs_DecisionTree.joblib')
+        emission_model = joblib.load(Path(__file__).parents[0] / 'model_SO_emission_ExtraTrees.joblib')
 
         diameter_In_predicted = diameter_model.predict(X_InP)
         abs_In_predicted = abs_model.predict(X_InP)
@@ -550,9 +551,9 @@ if st.session_state.current != None:
         X_CdSe = ct_CdSe.transform(user_df_CdSe)
 
 
-        diameter_CdSe_model = joblib.load('model_CdSe_SO_diameter_ExtraTrees.joblib')
-        abs_CdSe_model = joblib.load('model_CdSe_SO_abs_DecisionTree.joblib')
-        emission_CdSe_model = joblib.load('model_CdSe_SO_emission_DecisionTree.joblib')
+        diameter_CdSe_model = joblib.load(Path(__file__).parents[0] / 'model_CdSe_SO_diameter_ExtraTrees.joblib')
+        abs_CdSe_model = joblib.load(Path(__file__).parents[0] / 'model_CdSe_SO_abs_DecisionTree.joblib')
+        emission_CdSe_model = joblib.load(Path(__file__).parents[0] / 'model_CdSe_SO_emission_DecisionTree.joblib')
 
         diameter_CdSe_predicted = diameter_CdSe_model.predict(X_CdSe)
         abs_CdSe_predicted = abs_CdSe_model.predict(X_CdSe)
