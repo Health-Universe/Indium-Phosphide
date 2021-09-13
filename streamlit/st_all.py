@@ -515,7 +515,7 @@ if st.session_state.current != None:
         #Scaling and encoding user input using the raw dataset
         # df_CdSe = pd.read_csv('dataset_CdSe_raw.csv')
 
-         df_CdSe = Path(__file__).parents[0] / 'dataset_CdSe_raw.csv'
+        df_CdSe = Path(__file__).parents[0] / 'dataset_CdSe_raw.csv'
 
         #Separate out initial DataFrame into the input features and output features
         df_input_CdSe = df_CdSe.drop(columns =['Injection Temp (Celsius)', 'Metal_amount (g)',
