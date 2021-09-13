@@ -310,7 +310,7 @@ if st.session_state.current != None:
         st.write(user_df_InP)
 
         #Scaling and encoding user input using the raw dataset
-        df_InP = pd.read_csv('dataset/hao_dataset.csv')
+        df_InP = pd.read_csv('hao_dataset.csv')
         #Separate out initial DataFrame into the input features and output features
         df_input_InP = df_InP.drop(columns =['diameter_nm', 'abs_nm', 'emission_nm','doi','user','date_input'], inplace = False, axis = 1)
         df_output_d_InP = df_InP['diameter_nm']
