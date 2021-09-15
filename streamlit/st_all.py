@@ -22,7 +22,7 @@ def amount_test (chemical, chemical_amount):
     # Raise error if none chemical with amount OR 0.00 amount with chemical
     if chemical == 'None' and chemical_amount != 0.00:
         st.error('None cannot have an amount !!')
-        
+
     if chemical == 'None':
         chemical_amount = 0.00
         
@@ -656,5 +656,5 @@ if st.session_state.current != None:
     
 
 
-st.subheader('Updated 09/12/2021')
+st.subheader('Updated 09/14/2021')
 st.write('Contact: haon02@uw.edu')
