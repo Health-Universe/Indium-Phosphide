@@ -20,9 +20,9 @@ st.markdown('***')
 
 def amount_test (chemical, chemical_amount):
     # Raise error if none chemical with amount OR 0.00 amount with chemical
+    if chemical == 'None' and chemical_amount != 0.00:
     if chemical == 'None':
         chemical_amount = 0.00
-    if chemical == 'None' and chemical_amount != 0.00:
         st.error('None cannot have an amount !!')
     if chemical_amount == 0.00 and chemical != 'None':
         st.error('Amount of ' + chemical + ' needed !!')
