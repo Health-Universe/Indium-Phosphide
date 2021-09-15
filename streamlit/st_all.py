@@ -22,7 +22,7 @@ def amount_test (chemical, chemical_amount):
     if chemical == 'None':
         chemical_amount = 0.00
     if chemical_amount == 0.00 and chemical != 'None':
-        st.error('Amount')
+        st.error('Amount ' + chemical + ' needed !!')
 
 
 
@@ -116,6 +116,8 @@ if st.session_state.current != None:
 
             # Create question for indium amount
             In_amount = st.number_input(label='How much In source is used in mmol? (mmol)', value=0.00)
+
+            amount_test(In, In_amount)
 
         with row1a_2:
 
@@ -269,7 +271,7 @@ if st.session_state.current != None:
             if zinc == 'None':
                 zinc_amount = 0.00
             if zinc_amount == 0.00 and zinc != 'None':
-                st.error('Amount' + str(zinc) + 'needed!!')
+                st.error('Amount ' + str(zinc) + ' needed!!')
             
 
 
