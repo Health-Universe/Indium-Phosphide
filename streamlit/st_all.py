@@ -12,11 +12,14 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 st.set_page_config(layout="wide")
 
+
+# Make titles
 st.markdown("<h1 style='text-align: center; color: MediumAquaMarine;'>Machine Learning for Syntheses of Quantum Dots</h1>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: indigo; font-size:22px;'>Cossairt Laboratory - University of Washington</h1>", unsafe_allow_html=True)
 st.markdown('***')
 
 
+# Session states
 if "current" not in st.session_state:
 
     st.session_state.current = None
@@ -29,6 +32,8 @@ if "cdse" not in st.session_state:
 
     st.session_state.cdse = False
 
+
+# Create 2 buttons for 2 syntheses
 row0_1, row0_2, row0_3, row0_4, row0_5 = st.columns(5)
 with row0_2:
     st.write('Choose a synthesis:')
@@ -38,6 +43,7 @@ with row0_4:
     cdse = st.button("Cadmium Selenide")
 
 
+# Set session states for the two buttons so users can switch between buttons
 if inp:
 
     st.session_state.current = "inp"
@@ -46,13 +52,20 @@ if cdse:
 
     st.session_state.current = "cdse"
 
+
+
+
+# For InP synthesis
 if st.session_state.current != None:
+
     if st.session_state.current == "inp":
 
         st.header('Predicting Properties of InP Quantum Dots')
 
         st.markdown('****')
+
         st.write('Answer the questions below about your InP quandum dots synthesis and we will predict the diameter, absorbance max, and emission wavelength of your dots.')
+        
         st.markdown('****')
 
         row1_1, row1_2 = st.columns(2)
@@ -60,7 +73,7 @@ if st.session_state.current != None:
         with row1_1:
             st.subheader("Indium precursor")
             
-            # Creating indium question
+            # Create question for indium source
 
             In = st.radio(
                             "What is the indium source?",
@@ -74,7 +87,7 @@ if st.session_state.current != None:
         with row1_2:
             st.subheader("Phosphorus precursor")
 
-            # Creating phosphorus question
+            # Create question for phosphorus source
 
             P = st.radio(
                             "What is the phosphorus source?",
@@ -90,12 +103,16 @@ if st.session_state.current != None:
             st.markdown("##")
 
 
-
         row1a_1, row1a_2 = st.columns(2)
 
         with row1a_1:
+
+            # Create question for indium amount
             In_amount = st.number_input(label='How much In source is used in mmol? (mmol)', value=0.00)
+
         with row1a_2:
+
+            # Create question for P amount
             P_amount = st.number_input(label='How much P source is used in mmol? (mmol)', value=0.00)
 
 
@@ -108,7 +125,6 @@ if st.session_state.current != None:
 
         st.subheader("Solvents and ligands")
         row2_1, row2_2, row2_3, row2_4, row2_5 = st.columns(5)
-
 
         with row2_1:
 
@@ -124,10 +140,8 @@ if st.session_state.current != None:
 
         with row2_2:
 
-        # Creating TOP question
-
-            TOP = st.radio(
-                            "Do you add trioctylphosphine?",
+            # Creating TOP question
+            TOP = st.radio("Do you add trioctylphosphine?",
                             ('No',
                             'Yes',))
 
@@ -213,6 +227,7 @@ if st.session_state.current != None:
         st.subheader("Additives")
         row3_1, row3_2 = st.columns(2)
         with row3_1:
+
             # Creating zinc question
             zinc = st.radio(
                             "Do you add any zinc?",
@@ -228,7 +243,8 @@ if st.session_state.current != None:
 
 
         with row3_2:
-        # Other
+
+            # Other
             other = st.radio(
                             "Do you add any other compound?",
                             ('None',
@@ -245,6 +261,9 @@ if st.session_state.current != None:
             zinc_amount = st.number_input(label='How much zinc is used? (mmol)', value=0.00)
             if zinc == 'None':
                 zinc_amount = 0.00
+            if zinc_amount == 0.00 and zinc != 'None':
+                st.write('Amount for zinc needed')
+            
 
 
         with row3a_2:
@@ -262,21 +281,24 @@ if st.session_state.current != None:
         row4_1, row4_2, row4_3 = st.columns(3)
 
         with row4_1:
+
             # Reaction volume
             vol = st.number_input(label='What is the total volume of the reaction? (mL)', value=0.00)
 
         with row4_2:
+
             # Reaction temperature
             temp = st.number_input(label='What is the nucleation temperature? (C)', value=0.0)
 
         with row4_3:
+
             # Reaction time
             time = st.number_input(label='What is the reaction time (min)?', value=0.0)
 
 
 
 
-        #Rearange users' choice into a list to input to the ML model
+        # Rearange users' choice into a list to input to the ML model
         user_input_InP = [ In, In_amount, P, P_amount, sol, sol_amount, 
                     TOP, TOP_amount, acid, acid_amount, 
                     amine, amine_amount, thiol, thiol_amount,
@@ -284,7 +306,7 @@ if st.session_state.current != None:
                     vol, temp, time
                     ]
 
-        #Naming each choice in the user input
+        # Naming each choice in the user input
         user_df_InP = pd.DataFrame(np.array(user_input_InP).reshape(1, -1), columns=['in_source',
                                                                             'in_amount_mmol',
                                                                             'p_source',
@@ -312,7 +334,6 @@ if st.session_state.current != None:
         st.write(user_df_InP)
 
         #Scaling and encoding user input using the raw dataset
-        # df_InP = pd.read_csv('hao_dataset.csv')
         df_InP_1 = Path(__file__).parents[0] / 'hao_dataset.csv'
         df_InP = pd.read_csv(df_InP_1)
 
@@ -335,13 +356,16 @@ if st.session_state.current != None:
         ct_InP.fit_transform(df_input_InP)
 
 
-        #Use same column transformer on user input
+        # Use same column transformer on user input
         X_InP = ct_InP.transform(user_df_InP)
 
-
+        # Loading ML models for 3 outputs
         diameter_model = joblib.load(Path(__file__).parents[0] / 'model_SO_diameter_DecisionTree.joblib')
         abs_model = joblib.load(Path(__file__).parents[0] / 'model_SO_abs_DecisionTree.joblib')
         emission_model = joblib.load(Path(__file__).parents[0] / 'model_SO_emission_ExtraTrees.joblib')
+
+
+        # Make predictions
 
         diameter_In_predicted = diameter_model.predict(X_InP)
         abs_In_predicted = abs_model.predict(X_InP)
@@ -351,17 +375,21 @@ if st.session_state.current != None:
 
         col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
         with col3:
+
             predict = st.button('PREDICT')
+
         c1, c2, c3 =  st.columns([1,1,1])
         if predict:
+
             with c2:
+
                 st.write('Predicted diameter is', round(diameter_In_predicted[0], 3))
                 st.write('Predicted absorbance max is', round(abs_In_predicted[0], 3))
                 st.write('Predicted emission is', round(emission_In_predicted[0], 3))
     
 
     else:
-
+        # For CdSe synthesis
 
         st.header('Predicting Properties of CdSe Quantum Dots')
 
@@ -371,7 +399,10 @@ if st.session_state.current != None:
 
 
         row4_1, row4_2, row4_3, row4_4 = st.columns(4)
+
         with row4_1:
+
+        #Questions for reactants
             st.subheader('Cadmium precursor:')
             Cd = st.radio('What is your cadmium source?', 
                         ['cadmium stearate', 
@@ -381,6 +412,7 @@ if st.session_state.current != None:
                         'cadmium acetate dihydrate'])
         
         with row4_2:
+
             st.subheader('Ligand source:')
             Acid = st.radio('What is your carboxylic acid source?', 
                         ['None', 
@@ -391,7 +423,9 @@ if st.session_state.current != None:
                         'dodecylphosphonic acid',
                         'ethylphosphonic acid', 
                         'lauric acid'])
+
         with row4_3:
+
             st.subheader(' ')
             st.subheader(' ')
             Amine = st.radio('What is your amine source?', 
@@ -408,7 +442,9 @@ if st.session_state.current != None:
                         'oleylamine', 
                         'pyridine', 
                         'trioctylamine'])
+
         with row4_4:
+
             st.subheader(' ')
             st.subheader(' ')
             Ph = st.radio('What is your phosphine source?', 
@@ -418,22 +454,35 @@ if st.session_state.current != None:
                         'trioctylphosphine', 
                         'triphenylphosphine'])
 
+
         row4a_1, row4a_2, row4a_3, row4a_4 = st.columns(4)
+
         with row4a_1:
+
             Cd_amount = st.number_input(label='How much Cd source in mmol? (mmol)', value=0.00)
+            
+
         with row4a_2:
+
             Acid_amount = st.number_input(label='How much acid in mmol? (mmol)', value=0.00)
             if Acid == 'None':
                 Acid_amount = 0.00
+
+
         with row4a_3:
+
             Amine_amount = st.number_input(label='How much amine in mmol? (mmol)', value=0.00)
             if Amine == 'None':
                 Amine_amount = 0.00
+
+
         with row4a_4:
+
             Ph_amount = st.number_input(label='How much phosphine in mmol? (mmol)', value=0.00)
             if Ph == 'None':
                 Ph_amount = 0.00
         
+
         st.markdown('****')
         st.subheader('Selenium')
 
@@ -445,6 +494,7 @@ if st.session_state.current != None:
 
 
         row5_1, row5_2 = st.columns(2)
+
         with row5_1:
             sol1 = st.radio('6. What is your first solvent?',
                             ['None', 
@@ -452,7 +502,10 @@ if st.session_state.current != None:
                             'octadecene',
                             'phenyl ether', 
                             'trioctylphosphine oxide'])
+
+
         with row5_2:
+
             sol2 = st.radio('7. What is your second solvent?',
                             ['None', 
                             'phosphinic acid', 
@@ -461,10 +514,13 @@ if st.session_state.current != None:
 
 
         row5a_1, row5a_2 = st.columns(2)
+
         with row5a_1:
             sol1_amount = st.number_input(label='How much first solvent in g? (g)', value=0.00)
             if sol1 == 'None':
                 sol1_amount = 0.00
+
+
         with row5a_2:
             sol2_amount = st.number_input(label='How much second solvent in g? (g)', value=0.00)
             if sol2 == 'None':
