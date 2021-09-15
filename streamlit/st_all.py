@@ -205,7 +205,7 @@ if st.session_state.current != None:
             if TOP == 'No':
                 TOP = "None"
                 TOP_amount = 0.00
-            amount_test(TOP, TOP_amount))
+            amount_test(TOP, TOP_amount)
 
 
         with row2a_3:
