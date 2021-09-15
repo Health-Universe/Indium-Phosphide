@@ -269,7 +269,7 @@ if st.session_state.current != None:
             if zinc == 'None':
                 zinc_amount = 0.00
             if zinc_amount == 0.00 and zinc != 'None':
-                st.error('Amount for zinc needed')
+                st.error('Amount' + str(zinc) + 'needed!!')
             
 
 
