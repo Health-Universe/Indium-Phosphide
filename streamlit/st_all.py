@@ -23,7 +23,7 @@ def amount_test (chemical, chemical_amount):
     if chemical == 'None':
         chemical_amount = 0.00
     if chemical_amount == 0.00 and chemical != 'None':
-        st.error('Amount ' + chemical + ' needed !!')
+        st.error('Amount of ' + chemical + ' needed !!')
 
 
 
@@ -292,6 +292,8 @@ if st.session_state.current != None:
 
             # Reaction volume
             vol = st.number_input(label='What is the total volume of the reaction? (mL)', value=0.00)
+            if vol == 0.0:
+                st.error('Reaction volume needs to be greater than 0 C')
 
         with row4_2:
 
