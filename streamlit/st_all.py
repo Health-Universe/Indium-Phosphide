@@ -19,6 +19,7 @@ st.markdown("<h1 style='text-align: center; color: indigo; font-size:22px;'>Coss
 st.markdown('***')
 
 def amount_test (chemical, chemical_amount):
+    # Raise error if none chemical with amount OR 0.00 amount with chemical
     if chemical == 'None':
         chemical_amount = 0.00
     if chemical_amount == 0.00 and chemical != 'None':
@@ -124,6 +125,8 @@ if st.session_state.current != None:
             # Create question for P amount
             P_amount = st.number_input(label='How much P source is used in mmol? (mmol)', value=0.00)
 
+            amount_test(P, P_amount)
+
 
 
         st.markdown('****')
@@ -193,8 +196,7 @@ if st.session_state.current != None:
         with row2a_1:
 
             sol_amount = st.number_input(label='How much solvent is used? (mL)', value=0.00)
-            if sol == 'None':
-                sol_amount = 0.00
+            amount_test(sol, sol_amount)
 
 
         with row2a_2:
@@ -203,29 +205,28 @@ if st.session_state.current != None:
             if TOP == 'No':
                 TOP = "None"
                 TOP_amount = 0.00
+            amount_test(TOP, TOP_amount))
 
 
         with row2a_3:
 
             acid_amount = st.number_input(label='How much acid is used in mmol? (mmol)', value=0.00)
 
-            if acid == 'None':
-                acid_amount = 0.00
+            amount_test(acid, acid_amount)
 
 
         with row2a_4:
 
             amine_amount = st.number_input(label='How much amine is used in mmol? (mmol)', value=0.00)
             
-            if amine == 'None':
-                amine_amount = 0.00
+            amount_test(amine, amine_amount)
 
 
         with row2a_5:
 
             thiol_amount = st.number_input(label='How much thiol is used? (mmol)', value=0.00)
-            if thiol == 'None':
-                thiol_amount = 0.00
+            
+            amount_test(thiol, thiol_amount)
 
 
 
@@ -268,18 +269,16 @@ if st.session_state.current != None:
         with row3a_1:
 
             zinc_amount = st.number_input(label='How much zinc is used? (mmol)', value=0.00)
-            if zinc == 'None':
-                zinc_amount = 0.00
-            if zinc_amount == 0.00 and zinc != 'None':
-                st.error('Amount ' + str(zinc) + ' needed!!')
+            
+            amount_test(zinc, zinc_amount)
             
 
 
         with row3a_2:
 
             other_amount = st.number_input(label='How much in mmol? (mmol)', value=0.00)
-            if other == 'None':
-                other_amount = 0.00
+            
+            amount_test(other, other_amount)
 
 
 
@@ -298,12 +297,15 @@ if st.session_state.current != None:
 
             # Reaction temperature
             temp = st.number_input(label='What is the nucleation temperature? (C)', value=0.0)
+            if temp == 0.0:
+                st.error('Reaction temperature needs to be greater than 0 C')
 
         with row4_3:
 
             # Reaction time
             time = st.number_input(label='What is the reaction time (min)?', value=0.0)
-
+            if time == 0.0:
+                st.error('Reaction time needs to be greater than 0 mim')
 
 
 
@@ -469,33 +471,38 @@ if st.session_state.current != None:
         with row4a_1:
 
             Cd_amount = st.number_input(label='How much Cd source in mmol? (mmol)', value=0.00)
+
+            amount_test(Cd, Cd_amount)
             
 
         with row4a_2:
 
             Acid_amount = st.number_input(label='How much acid in mmol? (mmol)', value=0.00)
-            if Acid == 'None':
-                Acid_amount = 0.00
+            
+            amount_test(Acid, Acid_amount)
 
 
         with row4a_3:
 
             Amine_amount = st.number_input(label='How much amine in mmol? (mmol)', value=0.00)
-            if Amine == 'None':
-                Amine_amount = 0.00
+            
+            amount_test(Amine, Amine_amount)
 
 
         with row4a_4:
 
             Ph_amount = st.number_input(label='How much phosphine in mmol? (mmol)', value=0.00)
-            if Ph == 'None':
-                Ph_amount = 0.00
+            
+            amount_test(Ph, Ph_amount)
         
 
         st.markdown('****')
         st.subheader('Selenium')
 
         Se_amount = st.number_input(label='5. Selenium power is used; how much Selenium do you plan to use? (mmol)')
+
+        if Se_amount == 0.00:
+            st.error('Amount of selenium needed !!')
 
 
         st.markdown('****')
@@ -526,15 +533,13 @@ if st.session_state.current != None:
 
         with row5a_1:
             sol1_amount = st.number_input(label='How much first solvent in g? (g)', value=0.00)
-            if sol1 == 'None':
-                sol1_amount = 0.00
+            amount_test(sol1, sol1_amount)
+            
 
 
         with row5a_2:
             sol2_amount = st.number_input(label='How much second solvent in g? (g)', value=0.00)
-            if sol2 == 'None':
-                sol2_amount = 0.00
-
+            amount_test(sol2, sol2_amount)
 
         st.markdown('****')
 
@@ -544,10 +549,14 @@ if st.session_state.current != None:
         with row6_1:
             # Reaction temperature
             Temp = st.number_input(label='8. What is the nucleation temperature? (C)', value=0.0)
+            if Temp == 0.0:
+                st.error('Reaction temperature needs to be greater than 0 C')
 
         with row6_2:
             # Reaction time
             Time = st.number_input(label='9. What is the reaction time (min)?', value=0.0)
+            if Time == 0.0:
+                st.error('Reaction time needs to be greater than 0 mim')
 
         
 
