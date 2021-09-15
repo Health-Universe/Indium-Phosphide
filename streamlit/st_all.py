@@ -18,6 +18,13 @@ st.markdown("<h1 style='text-align: center; color: MediumAquaMarine;'>Machine Le
 st.markdown("<h1 style='text-align: center; color: indigo; font-size:22px;'>Cossairt Laboratory - University of Washington</h1>", unsafe_allow_html=True)
 st.markdown('***')
 
+def amount_test (chemical, chemical_amount):
+    if chemical == 'None':
+        chemical_amount = 0.00
+    if chemical_amount == 0.00 and chemical != 'None':
+        st.error('Amount')
+
+
 
 # Session states
 if "current" not in st.session_state:
@@ -262,7 +269,7 @@ if st.session_state.current != None:
             if zinc == 'None':
                 zinc_amount = 0.00
             if zinc_amount == 0.00 and zinc != 'None':
-                st.write('Amount for zinc needed')
+                st.error('Amount for zinc needed')
             
 
 
