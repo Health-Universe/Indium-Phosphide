@@ -168,6 +168,7 @@ if st.session_state.current != None:
             acid = st.radio(
                             "Do you add any acid?",
                             ('None',
+                            'lauric acid',
                             'stearic acid',
                             'myristic acid',
                             'oleic acid',
