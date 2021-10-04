@@ -300,7 +300,7 @@ if st.session_state.current != None:
             # Reaction volume
             vol = st.number_input(label='What is the total volume of the reaction? (mL)', value=0.00)
             if vol == 0.0:
-                st.error('Reaction volume needs to be greater than 0 C')
+                st.error('Reaction volume needs to be greater than 0 mL')
 
         with row4_2:
 
