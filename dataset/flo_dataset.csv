@@ -34,7 +34,7 @@ indium chloride,0.23,tris(diethylamino)phosphine,0.8,None,0,oleylamine,2.468,Non
 indium chloride,0.23,tris(diethylamino)phosphine,0.8,None,0,oleylamine,2.468,None,0,None,0,zinc chloride,1.1,None,0,2.468,180,20,3.2,None,None
 indium chloride,0.23,tris(diethylamino)phosphine,0.8,None,0,oleylamine,2.468,None,0,None,0,zinc chloride,1.1,None,0,2.468,180,20,3.2,None,None
 indium chloride,0.45,tris(dimethylamino)phosphine,1.38,None,0,dodecylamine,3,None,0,None,0,zinc chloride,2.2,None,0,3,180,5,3.2,550,None
-indium chloride,0.1,tris(trimethylsilyl)phosphine,0.1,stearic acid,0.1,octadecene,3,hexadecylamine ,0.052,None,0,zinc undecylenate,0.08,None,0,3.052,240,20,None,570,630
+indium chloride,0.1,tris(trimethylsilyl)phosphine,0.1,stearic acid,0.1,octadecene,3,hexadecylamine,0.052,None,0,zinc undecylenate,0.08,None,0,3.052,240,20,None,570,630
 indium acetate,1.2,tris(trimethylsilyl)phosphine,1.2,None,0,octadecene,3,dioctylamine,0.151,None,0,None,0,None,0,3.151,178,840,6.7,622,680
 indium acetate,0.4,tris(trimethylsilyl)phosphine,0.4,None,0,octadecene,3,oleylamine,0.494,None,0,None,0,None,0,3.494,178,4,1.5,445,568
 indium acetate,1.2,tris(trimethylsilyl)phosphine,1.2,None,0,octadecene,3,oleylamine,0.494,None,0,None,0,None,0,3.494,178,32,2.5,543,589
@@ -61,8 +61,8 @@ indium chloride,0.3,tris(dimethylamino)phosphine,0.08,None,0,oleylamine,5,None,0
 indium chloride,0.3,tris(dimethylamino)phosphine,0.08,None,0,oleylamine,5,None,0,None,0,zinc chloride,2.2,water,1.2,5,180,3,None,460,None
 indium chloride,0.3,tris(dimethylamino)phosphine,0.08,None,0,oleylamine,5,None,0,None,0,zinc chloride,2.2,water,1.2,5,180,15,1.75,481,None
 indium chloride,0.1,tris(trimethylsilyl)phosphine,0.1,None,0,trioctylphosphine,5,None,0,None,0,zinc oleate,2,None,0,5,280,60,2.3,423,485
-"indium tris(N,N-diisopropylacetamidinato) ",0.3,tris(trimethylsilyl)phosphine,0.15,palmitic acid,0.9,mesitylene,5,hexadecylamine,0.77,None,0,None,0,None,0,5.077,150,1260,2,523,None
-"indium tris(N,N-diisopropylacetamidinato) ",0.3,tris(trimethylsilyl)phosphine,0.15,palmitic acid,0.9,mesitylene,5,hexadecylamine,0.77,None,0,None,0,None,0,5.077,230,1260,4.1,584,None
+"indium tris(N,N-diisopropylacetamidinato)",0.3,tris(trimethylsilyl)phosphine,0.15,palmitic acid,0.9,mesitylene,5,hexadecylamine,0.77,None,0,None,0,None,0,5.077,150,1260,2,523,None
+"indium tris(N,N-diisopropylacetamidinato)",0.3,tris(trimethylsilyl)phosphine,0.15,palmitic acid,0.9,mesitylene,5,hexadecylamine,0.77,None,0,None,0,None,0,5.077,230,1260,4.1,584,None
 indium myristate,2,tris(trimethylsilyl)phosphine,0.15,None,0,octadecene,5,trioctylphosphine,1,None,0,None,0,None,0,6,300,30,3,547,590
 indium chloride,1.81,tris(dimethylamino)phosphine,2.75,None,0,dodecylamine,6.198,toluene,5,None,0,None,0,None,0,11.198,180,1440,2.3,512,None
 indium chloride,1.81,tris(dimethylamino)phosphine,2.75,None,0,dodecylamine,6.198,toluene,5,None,0,None,0,None,0,11.198,180,1440,3.2,499,590
