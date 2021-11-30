@@ -91,9 +91,9 @@ if st.session_state.current != None:
                             "What is the indium source?",
                             ('indium acetate', 
                             'indium bromide', 
-                            'indium chloride', 'indium iodide',
-                            'indium myristate', 'chloroindium oxalate', 
-                            'indium oxalate', 'indium palmitate', 
+                            'indium chloride', 
+                            'indium iodide',
+                            'indium myristate',
                             'indium trifluoroacetate'))
 
         with row1_2:
@@ -107,10 +107,7 @@ if st.session_state.current != None:
                             'tris(dimethylamino)phosphine - P(NMe2)3',
                             'tris(diethylamino)phosphine - P(NEt2)3',
                             'bis(trimethylsilyl)phosphine'
-                            'phosphine gas',
-                            'phosphorus trichloride',
-                            'white phosphorus',
-                            'sodium phosphide',))
+                            ))
             st.markdown("######")
             st.markdown("##")
 
@@ -139,153 +136,120 @@ if st.session_state.current != None:
 
 
 
-        st.subheader("Solvents and ligands")
-        row2_1, row2_2, row2_3, row2_4, row2_5 = st.columns(5)
+        st.subheader("Solvents - in the order of amount added")
+        row2_1, row2_2 = st.columns(2)
 
+ # Creating solvent questions
         with row2_1:
 
-            # Creating solvent question
-            sol = st.radio(
-                            "What is the non-coordinating solvent?",
+            sol_1 = st.radio(
+                            "What is the first solvent?",
                             ('None',
                             'octadecene - ODE',
-                            'toluene',
-                            'mesitylene',
-                            'dimethylformamide - DMF',))
+                            'oleylamine',
+                            'trioctylamine',
+                            'trioctylphosphine',
+                            'dodecylamine',
+                            ))
 
 
         with row2_2:
 
-            # Creating TOP question
-            TOP = st.radio("Do you add trioctylphosphine?",
-                            ('No',
-                            'Yes',))
-
-
-        with row2_3:
-
-            # Creating acid question
-            acid = st.radio(
-                            "Do you add any acid?",
+            sol_2 = st.radio("What is the second solvent?",
                             ('None',
-                            'lauric acid',
-                            'stearic acid',
-                            'myristic acid',
-                            'oleic acid',
-                            'palmitic acid',))
-
-
-        with row2_4:
-
-            # Creating amine question
-            amine = st.radio(
-                            "Do you add any amine?",
-                            ('None',
+                            'octadecene - ODE',
                             'oleylamine',
-                            'octylamine',
+                            'dioctylamine',
                             'hexadecylamine',
-                            'dioctylamine'))
+                            'octylamine',
+                            'trioctylphosphine',
+                            'trioctylphosphine oxide',
+                            'toluene',
+                            'dodecylamine',
+                            '4-ethylpyridine',
+                            'dioctyl ether'))
 
 
-        with row2_5:
-
-            # Creating thiol question
-            thiol = st.radio(
-                            "Do you add any thiol?",
-                            ('None',
-                            'dodecanethiol'))
 
 
-        row2a_1, row2a_2, row2a_3, row2a_4, row2a_5 = st.columns(5)
+        row2a_1, row2a_2 = st.columns(2)
 
         with row2a_1:
 
-            sol_amount = st.number_input(label='How much solvent is used? (mL)', value=0.00)
-            amount_test(sol, sol_amount)
+            sol_1_amount = st.number_input(label='How much of the first solvent is used? (mL)', value=0.00)
+            amount_test(sol_1, sol_1_amount)
 
 
         with row2a_2:
 
-            TOP_amount = st.number_input(label='If yes, how much? (mmol)', value=0.00)
-            if TOP == 'No':
-                TOP = "None"
-                TOP_amount = 0.00
-            else:
-                TOP = 'TOP'
-            amount_test(TOP, TOP_amount)
-
-
-        with row2a_3:
-
-            acid_amount = st.number_input(label='How much acid is used in mmol? (mmol)', value=0.00)
-
-            amount_test(acid, acid_amount)
-
-
-        with row2a_4:
-
-            amine_amount = st.number_input(label='How much amine is used in mmol? (mmol)', value=0.00)
-            
-            amount_test(amine, amine_amount)
-
-
-        with row2a_5:
-
-            thiol_amount = st.number_input(label='How much thiol is used? (mmol)', value=0.00)
-            
-            amount_test(thiol, thiol_amount)
-
-
+            sol_2_amount = st.number_input(label='How much of the second solvent is used? (mL)', value=0.00)
+            amount_test(sol_2, sol_2_amount)
 
 
         st.markdown('****')
 
 
-        st.subheader("Additives")
-        row3_1, row3_2 = st.columns(2)
-        with row3_1:
+        st.subheader("Ligands and Additives")
+        row3_1, row3_2, row3_3 = st.columns(3)
 
-            # Creating zinc question
-            zinc = st.radio(
-                            "Do you add any zinc?",
+        with row3_1:
+            ligand = st.radio(
+                            "What ligand is used?",
+                            ('None',
+                            'lauric acid',
+                            'myristic acid',
+                            'oleic acid',
+                            'palmitic acid',
+                            'stearic acid',
+                            ))
+        with row3_2:
+            other_1 = st.radio(
+                            "What is the first additive?",
                             ('None',
                             'zinc chloride',
                             'zinc bromide',
                             'zinc iodide',
                             'zinc acetate',
-                            'zinc octanoate',
-                            'zinc oleate',
                             'zinc stearate',
-                            'zinc undecylenate'))
-
-
-        with row3_2:
-
-            # Other
-            other = st.radio(
-                            "Do you add any other compound?",
-                            ('None',
-                            'trioctylphosphine oxide',
+                            'zinc oleate',
+                            'zinc undecylenate',
                             'superhydride',
-                            'copper bromide',
+                            'acetic acid',
                             'tetrabutylammonium myristate'))
+            
+        with row3_3:                            
+
+            other_2 = st.radio(
+                            "What is the second additive?",
+                            ('None',
+                            'copper bromide',
+                            'water',
+                            'oleic acid'
+                            ))
 
 
 
-        row3a_1, row3a_2 = st.columns(2)
+        row3a_1, row3a_2, row3a_3 = st.columns(3)
+
         with row3a_1:
 
-            zinc_amount = st.number_input(label='How much zinc is used? (mmol)', value=0.00)
+            ligand_amount = st.number_input(label='How much ligand is used? (mmol)', value=0.00)
             
-            amount_test(zinc, zinc_amount)
+            amount_test(ligand, ligand_amount)
             
-
-
         with row3a_2:
 
-            other_amount = st.number_input(label='How much in mmol? (mmol)', value=0.00)
+            other_1_amount = st.number_input(label='How much of the first additive is used? (mmol)', value=0.00)
             
-            amount_test(other, other_amount)
+            amount_test(other_1, other_1_amount)
+            
+
+
+        with row3a_3:
+
+            other_2_amount = st.number_input(label='How much of the second additive is used? (mmol)', value=0.00)
+            
+            amount_test(other_2, other_2_amount)
 
 
 
@@ -314,75 +278,81 @@ if st.session_state.current != None:
             # Reaction time
             time = st.number_input(label='What is the reaction time (min)?', value=0.0)
             if time == 0.0:
-                st.error('Reaction time needs to be greater than 0 mim')
+                st.error('Reaction time needs to be greater than 0 min')
 
 
 
         # Rearange users' choice into a list to input to the ML model
-        user_input_InP = [ In, In_amount, P, P_amount, sol, sol_amount, 
-                    TOP, TOP_amount, acid, acid_amount, 
-                    amine, amine_amount, thiol, thiol_amount,
-                    zinc, zinc_amount, other, other_amount, 
-                    vol, temp, time
-                    ]
+        user_input_InP = [ In, In_amount, P, P_amount, 
+                            ligand, ligand_amount,
+                            sol_1, sol_1_amount,
+                            sol_2, sol_2_amount,
+                            other_1, other_1_amount,
+                            other_2, other_2_amount,
+                            vol, temp, time
+                         ]
 
         # Naming each choice in the user input
         user_df_InP = pd.DataFrame(np.array(user_input_InP).reshape(1, -1), columns=['in_source',
-                                                                            'in_amount_mmol',
-                                                                            'p_source',
-                                                                            'p_amount_mmol',
-                                                                            'sol',
-                                                                            'sol_amount_ml',
-                                                                            'TOP',
-                                                                            'TOP_amount_mmol',
-                                                                            'acid',
-                                                                            'acid_amount_mmol',
-                                                                            'amine',
-                                                                            'amine_amount_mmol',
-                                                                            'thiol',
-                                                                            'thiol_amount_mmol',
-                                                                            'zinc',
-                                                                            'zinc_amount_mmol',
-                                                                            'other',
-                                                                            'other_amount_mmol',
-                                                                            'total_volume_ml',
-                                                                            'temp_c',
-                                                                            'time_min'             ])
+                                                                                    'in_amount_mmol',
+                                                                                    'p_source', 
+                                                                                    'p_amount_mmol',
+                                                                                    'ligand_source', 
+                                                                                    'ligand_amount_mmol',
+                                                                                    'first_sol', 
+                                                                                    'first_sol_amount_ml',
+                                                                                    'second_sol', 
+                                                                                    'second_sol_amount_ml', 
+                                                                                    'other_1', 
+                                                                                    'other_1_amount_mmol', 
+                                                                                    'other_2',
+                                                                                    'other_2_amount_mmol', 
+                                                                                    'total_volume_ml', 
+                                                                                    'temp_c', 
+                                                                                    'time_min',
+                                                                                    ])
         #Print user inputs
 
         st.subheader("Check your input")
         st.write(user_df_InP)
 
         #Scaling and encoding user input using the raw dataset
-        df_InP_1 = Path(__file__).parents[0] / 'hao_dataset.csv'
+        df_InP_1 = Path(__file__).parents[0] / 'flo_dataset_HI.csv'
         df_InP = pd.read_csv(df_InP_1)
 
         #Separate out initial DataFrame into the input features and output features
-        df_input_InP = df_InP.drop(columns =['diameter_nm', 'abs_nm', 'emission_nm','doi','user','date_input'], inplace = False, axis = 1)
+        df_input_InP = df_InP.drop(columns =['diameter_nm', 'abs_nm', 'emission_nm'], inplace = False, axis = 1)
         df_output_d_InP = df_InP['diameter_nm']
         df_output_e_InP = df_InP['emission_nm']
         df_output_a_InP = df_InP['abs_nm']
 
+        
 
         df_input_InP['temp_c'] = df_input_InP['temp_c'].astype(float)
         input_num_cols_InP = [col for col in df_input_InP.columns if df_InP[col].dtypes !='O']
         input_cat_cols_InP = [col for col in df_input_InP.columns if df_InP[col].dtypes =='O']
-
+        
+        
         ct_InP = ColumnTransformer([
             ('step1', StandardScaler(), input_num_cols_InP),
             ('step2', OneHotEncoder(sparse=False, handle_unknown='ignore'), input_cat_cols_InP)
         ], remainder = 'passthrough')
+        
+        
 
+
+        
         ct_InP.fit_transform(df_input_InP)
 
 
         # Use same column transformer on user input
         X_InP = ct_InP.transform(user_df_InP)
 
+
         # Loading ML models for 3 outputs
-        diameter_model = joblib.load(Path(__file__).parents[0] / 'model_SO_diameter_DecisionTree.joblib')
-        abs_model = joblib.load(Path(__file__).parents[0] / 'model_SO_abs_DecisionTree.joblib')
-        emission_model = joblib.load(Path(__file__).parents[0] / 'model_SO_emission_ExtraTrees.joblib')
+        diameter_model = joblib.load(Path(__file__).parents[0] / 'model_SO_diameter_DecisionTree_condensed_HI.joblib')
+        abs_model = joblib.load(Path(__file__).parents[0] / 'model_SO_abs_ExtraTrees_condensed_HI.joblib')
+        emission_model = joblib.load(Path(__file__).parents[0] / 'model_SO_emission_ExtraTrees_condensed_HI.joblib')
 
 
         # Make predictions
@@ -402,10 +372,7 @@ if st.session_state.current != None:
         if predict:
 
             with c2:
-                st.write("")
-                st.write("")
-                st.write("")
-        
+
                 st.write('Predicted diameter is', round(diameter_In_predicted[0], 3))
                 st.write('Predicted absorbance max is', round(abs_In_predicted[0], 3))
                 st.write('Predicted emission is', round(emission_In_predicted[0], 3))

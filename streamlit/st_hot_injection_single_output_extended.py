@@ -14,7 +14,7 @@ st.set_page_config(layout="wide")
 
 
 # Make titles
-st.markdown("<h1 style='text-align: center; color: MediumAquaMarine;'>Machine Learning for Syntheses of Quantum Dots</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: MediumAquaMarine;'>Machine Learning for Hot Injection Syntheses of Quantum Dots</h1>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: indigo; font-size:22px;'>Cossairt Laboratory - University of Washington</h1>", unsafe_allow_html=True)
 st.markdown('***')
 
@@ -91,9 +91,9 @@ if st.session_state.current != None:
                             "What is the indium source?",
                             ('indium acetate', 
                             'indium bromide', 
-                            'indium chloride', 'indium iodide',
-                            'indium myristate', 'chloroindium oxalate', 
-                            'indium oxalate', 'indium palmitate', 
+                            'indium chloride', 
+                            'indium iodide',
+                            'indium myristate', 
                             'indium trifluoroacetate'))
 
         with row1_2:
@@ -107,10 +107,7 @@ if st.session_state.current != None:
                             'tris(dimethylamino)phosphine - P(NMe2)3',
                             'tris(diethylamino)phosphine - P(NEt2)3',
                             'bis(trimethylsilyl)phosphine'
-                            'phosphine gas',
-                            'phosphorus trichloride',
-                            'white phosphorus',
-                            'sodium phosphide',))
+                            ))
             st.markdown("######")
             st.markdown("##")
 
@@ -150,8 +147,7 @@ if st.session_state.current != None:
                             ('None',
                             'octadecene - ODE',
                             'toluene',
-                            'mesitylene',
-                            'dimethylformamide - DMF',))
+                            ))
 
 
         with row2_2:
@@ -253,7 +249,6 @@ if st.session_state.current != None:
                             'zinc bromide',
                             'zinc iodide',
                             'zinc acetate',
-                            'zinc octanoate',
                             'zinc oleate',
                             'zinc stearate',
                             'zinc undecylenate'))
@@ -354,7 +349,7 @@ if st.session_state.current != None:
         st.write(user_df_InP)
 
         #Scaling and encoding user input using the raw dataset
-        df_InP_1 = Path(__file__).parents[0] / 'hao_dataset.csv'
+        df_InP_1 = Path(__file__).parents[0] / 'hao_dataset_HI.csv'
         df_InP = pd.read_csv(df_InP_1)
 
         #Separate out initial DataFrame into the input features and output features
@@ -380,9 +375,9 @@ if st.session_state.current != None:
         X_InP = ct_InP.transform(user_df_InP)
 
         # Loading ML models for 3 outputs
-        diameter_model = joblib.load(Path(__file__).parents[0] / 'model_SO_diameter_DecisionTree.joblib')
-        abs_model = joblib.load(Path(__file__).parents[0] / 'model_SO_abs_DecisionTree.joblib')
-        emission_model = joblib.load(Path(__file__).parents[0] / 'model_SO_emission_ExtraTrees.joblib')
+        diameter_model = joblib.load(Path(__file__).parents[0] / 'model_SO_diameter_ExtraTrees_HI.joblib')
+        abs_model = joblib.load(Path(__file__).parents[0] / 'model_SO_abs_ExtraTrees_HI.joblib')
+        emission_model = joblib.load(Path(__file__).parents[0] / 'model_SO_emission_DecisionTree_HI.joblib')
 
 
         # Make predictions
