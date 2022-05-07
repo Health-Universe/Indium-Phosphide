@@ -10,6 +10,9 @@ import streamlit as st
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
+from numpy import std, absolute, mean
+
+
 st.set_page_config(layout="wide")
 
 
@@ -28,6 +31,11 @@ def amount_test (chemical, chemical_amount):
         
     if chemical_amount == 0.00 and chemical != 'None':
         st.error('Amount of ' + chemical + ' needed !!')
+
+def pred_interval(data, response, confidence):
+    MAD = mean(absolute(data - mean(data)))
+    uncertainty = confidence*MAD 
+    return uncertainty
 
 
 
@@ -386,24 +394,49 @@ if st.session_state.current != None:
         abs_In_predicted = abs_model.predict(X_InP)
         emission_In_predicted = emission_model.predict(X_InP)
 
+
+        # Uncertainty
+
+        
+
+
         st.markdown('****')
 
-        col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
-        with col3:
+        col1, col2, col3, col4, col5,col6,col7,col8,col9,col10,col11,col12,col13,col14,col15,col16,col17  = st.columns([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+        with col9:
 
             predict = st.button('PREDICT')
 
         c1, c2, c3 =  st.columns([1,1,1])
         if predict:
+            diameter_pred_In = round(diameter_In_predicted[0], 3)
+            emission_pred_In = round(emission_In_predicted[0], 3)
+            absorption_pred_In = round(abs_In_predicted[0], 3)
 
             with c2:
                 st.write("")
                 st.write("")
                 st.write("")
         
-                st.write('Predicted diameter is', round(diameter_In_predicted[0], 3))
-                st.write('Predicted absorbance max is', round(abs_In_predicted[0], 3))
-                st.write('Predicted emission is', round(emission_In_predicted[0], 3))
+                # st.write('Predicted diameter is', round(diameter_In_predicted[0], 3))
+                # st.write('Predicted absorbance max is', round(abs_In_predicted[0], 3))
+                # st.write('Predicted emission is', round(emission_In_predicted[0], 3))
+
+            html_str = f"""
+            
+            <style>
+            p.a {{
+                 font: bold {22}px Courier;
+                }}
+            </style>
+            <center>
+            <p style="font-family: Arial", class="a">Predicted diameter is <span style="color:blue;font-weight:bold">{diameter_pred_In}</span> <span>&#177;</span> 0.64 nm</p>
+            <p style="font-family: Arial", class="a">Predicted absorption is <span style="color:blue;font-weight:bold">{absorption_pred_In}</span> <span>&#177;</span> 58.3 nm</p>
+            <p style="font-family: Arial", class="a">Predicted emission is <span style="color:blue;font-weight:bold">{emission_pred_In}</span> <span>&#177;</span> 41.4 nm</p>
+            </center>
+            """
+
+            st.markdown(html_str, unsafe_allow_html=True)
     
 
     else:
@@ -643,17 +676,43 @@ if st.session_state.current != None:
 
         st.markdown('****')
 
-        col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
-        with col3:
+        
+        
+        col1, col2, col3, col4, col5,col6,col7,col8,col9,col10,col11,col12,col13,col14,col15,col16,col17  = st.columns([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+        with col9:
+
             predict = st.button('PREDICT')
+
         c1, c2, c3 =  st.columns([1,1,1])
+
         if predict:
+
+            diameter_pred_Cd = round(diameter_CdSe_predicted[0], 2)
+            emission_pred_Cd = round(emission_CdSe_predicted[0], 1)
+            absorption_pred_Cd = round(abs_CdSe_predicted[0], 1)
+
             with c2:
-                st.write('Predicted diameter is', round(diameter_CdSe_predicted[0], 3))
-                st.write('Predicted absorbance max is', round(abs_CdSe_predicted[0], 3))
-                st.write('Predicted emission is', round(emission_CdSe_predicted[0], 3))
+                st.write("")
+                st.write("")
+                st.write("")
+        
+            html_str = f"""
+            
+            <style>
+            p.a {{
+                 font: bold {22}px Courier;
+                }}
+            </style>
+            <center>
+            <p style="font-family: Arial", class="a">Predicted diameter is <span style="color:blue;font-weight:bold">{diameter_pred_Cd}</span> <span>&#177;</span> 0.76 nm</p>
+            <p style="font-family: Arial", class="a">Predicted absorption is <span style="color:blue;font-weight:bold">{absorption_pred_Cd}</span> <span>&#177;</span> 50.13 nm</p>
+            <p style="font-family: Arial", class="a">Predicted emission is <span style="color:blue;font-weight:bold">{emission_pred_Cd}</span> <span>&#177;</span> 31.7 nm</p>
+            </center>
+            """
+
+            st.markdown(html_str, unsafe_allow_html=True)
     
 
 
-st.subheader('Updated 12/13/2021')
+st.subheader('Updated 5/7/2022')
 st.write('Contact: haon02@uw.edu')
